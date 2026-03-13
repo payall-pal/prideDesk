@@ -29,7 +29,7 @@ const Pricing = () => {
             opacity: 0,
             scrollTrigger: {
                 trigger: ".main6",
-                start: "top 50%",
+                start: "top 70%",
                 end: "top 20%",
                 scrub: 3
             }
@@ -108,7 +108,8 @@ const Pricing = () => {
                             </div>
 
                         </div>
-                        <button className='bg-white/90 inline-block rounded-4xl py-2 font-medium text-black'>Get in touch</button>
+                        <a className='bg-white/90 text-center rounded-4xl py-2 font-medium text-black' href="#contact">Get in touch</a>
+                       
                     </div>
                 </div>
             </div>
@@ -116,7 +117,7 @@ const Pricing = () => {
             <div className='main7 h-[15vw] w-[93vw] text-white flex  py-[5vw]'>
 
                 <div className='h-full w-1/4'>
-                    <h4 className=' text-lg text-gray-200'>Looking for more?</h4>
+                    <a className=' text-lg text-gray-200' href="#services"> <h4 >Looking for more?</h4></a>
                 </div>
 
                 <div className='h-full w-3/4 flex flex-col gap-[0.5vw]  mr-[5vw]'>

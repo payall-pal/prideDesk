@@ -82,10 +82,10 @@ const Projects = () => {
 
 
     return (
-        <div className='h-[75vw] w-screen  flex flex-col'>
+        <div className='projects h-[75vw] w-screen text-white flex flex-col'>
 
             <div className='h-[15vw] w-full flex  mx-[7vw]'>
-                <h6 className='h-[15vw] w-[22vw] text-gray-500 font-medium'>01</h6>
+                <h6 className='h-[15vw] w-[22vw] text-white/50 font-medium'>01</h6>
                 <div className='h-[15vw] w-[33vw] pt-6'> <h1 className='text-[6vw] '>Projects.</h1> <div className='h-[0.1vw] w-[12vw] bg-black'></div></div>
                 <p className='h-[15vw] w-[36vw] text-start mt-[6vw]  font-medium ml-[7vw] text-[1vw]'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  Here are some of our recent works <br />in branding, websites, and applications</p>
             </div>

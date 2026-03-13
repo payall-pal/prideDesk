@@ -2,11 +2,11 @@
 
 const Hero = () => {
     return (
-        <div className="relative bg-black min-h-screen text-white pr-[4vw]">
+        <div className="relative bg-black h-[100vw] text-white pr-[4vw]">
 
 
             <div className="">
-                <h1 className="absolute left-[15vw] top-[6vw] text-[13vw]">PRI</h1>
+                <h1 className="absolute left-[15vw] top-[6vw] lg:text-[13vw] md:text-[9vw] sm:text-[4vw]">PRI</h1>
                 <h1 className="absolute left-[27vw] top-[18vw] text-[13vw]">DE</h1>
                 <h1 className="absolute left-[38vw] top-[29vw] text-[13vw]">SK</h1>
             </div>

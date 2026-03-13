@@ -2,6 +2,9 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
+import Hero2 from './Hero2'
+import ProjectCard from './ProjectCard'
+import Projects from './Projects'
 
 const Navbar2 = () => {
 
@@ -20,7 +23,7 @@ const Navbar2 = () => {
     gsap.from(navRef.current, {
       y: -7,
       duration: 0.6,
-      delay: 0.5,
+      delay: 3,
       opacity: 0
     })
   })
@@ -30,38 +33,54 @@ const Navbar2 = () => {
 
 
   return (
-    <div className='fixed z-10 w-full flex items-center  text-white justify-between pb-[0.7vw] pt-[2vw] px-[3vw]'>
-      <h4 ref={el => navRef.current[0] = el} className='font-mono text-xl'>PRIDEDESK</h4>
-      <div ref={el => navRef.current[1] = el} className='flex gap-[2vw] font-medium text-xl'>
+    <div className='fixed z-10 w-full flex items-center  text-white/80 justify-between lg:pb-[0.7vw] lg:pt-[2vw] pt-[4vw] lg:px-[3vw] px-[5.5vw]'>
+      <h4 ref={el => navRef.current[0] = el} className='font-mono lg:text-[1.1vw] text-[3.7vw]'> PRIDEDESK</h4>
+      <div ref={el => navRef.current[1] = el} className='flex gap-[12vw] mr-[3vw] lg:text-[0.95vw] '>
 
-
-
-        
-        </div>
-        <div className='active:scale-95'>
-          <Link onMouseEnter={() => setHover1(true)} onMouseLeave={() => setHover1(false)} >About</Link>
-          <div className={`transition-opacity duration-300  h-[0.08vw] w-full bg-white ${hover1 ? "opacity-100" : "opacity-0"}`}>
+          <div className=' cursor-pointer active:scale-95'>
+            <a href='#home' onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} >Home</a>
+            <div className={`transition-opacity  duration-300  h-[0.08vw] w-full bg-white/80 ${hover ? "opacity-100" : "opacity-0"}`}>
+            </div>
 
           </div>
-        </div>
-        <div className='active:scale-95'>
-          <Link onMouseEnter={() => setHover2(true)} onMouseLeave={() => setHover2(false)} >projects</Link>
-          <div className={`transition-opacity duration-300  h-[0.08vw] w-full bg-white ${hover2 ? "opacity-100" : "opacity-0"}`}>
 
+          <div className='active:scale-95'>
+            <a href='#about' onMouseEnter={() => setHover1(true)} onMouseLeave={() => setHover1(false)} >About</a>
+            <div className={`transition-opacity duration-300  h-[0.08vw] w-full bg-white/80 ${hover1 ? "opacity-100" : "opacity-0"}`}>
+
+            </div>
           </div>
-        </div>
-        <div className='active:scale-95' >
-          <Link onMouseEnter={() => setHover3(true)} onMouseLeave={() => setHover3(false)} >Contact</Link>
-          <div className={`transition-opacity duration-300  h-[0.08vw] w-full bg-white ${hover3 ? "opacity-100" : "opacity-0"}`}>
 
+          <div className='active:scale-95'>
+            <a href='#projects' onMouseEnter={() => setHover2(true)} onMouseLeave={() => setHover2(false)} >Projects</a>
+            <div className={`transition-opacity duration-300  h-[0.08vw] w-full bg-white/80 ${hover2 ? "opacity-100" : "opacity-0"}`}>
+
+            </div>
           </div>
-        </div>
 
-        
+          <div className='active:scale-95' >
+            <a href='#contact' onMouseEnter={() => setHover3(true)} onMouseLeave={() => setHover3(false)} >Contact</a>
+            <div className={`transition-opacity duration-300  h-[0.08vw] w-full bg-white/80 ${hover3 ? "opacity-100" : "opacity-0"}`}>
+
+            </div>
+          </div>
+
+
+          
+      </div>
+      <div className='text-white lg:hidden block'>
+        <i class="ri-menu-3-line"></i>
+      </div>
+
+
+
+
+      {/* <div className='cursor-pointer'>
         <i class="ri-menu-3-line"></i>
 
-      </div>
-   
+      </div> */}
+
+    </div>
   )
 }
 

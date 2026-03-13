@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import 'swiper/css';
+
 
 :root{
     --orange: #F25623;

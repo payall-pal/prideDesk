@@ -11,7 +11,7 @@ const Services = () => {
         {
             title: "Branding",
             description: "We create brands that stand out and connect",
-            skills: ["Brand Identity & logo design", "Brand strategy & positing", "Visual strategy & positioning"]
+            skills: ["Brand Identity", "Brand strategy", "Visual strategy"]
 
         },
         {
@@ -64,8 +64,8 @@ const Services = () => {
 
 
     return (
-        <section className='trigger1 w-full min-h-screen bg-gray-800 p-10 relative '>
-            <div  className='h-[10vw] w-[93vw] text-white flex  gap-2'>
+        <section className='trigger1 w-full bg-gray-300 min-h-screen text-black p-10 relative '>
+            <div  className='h-[10vw] w-[93vw]  flex  gap-2'>
                 <div ref={divRef} className='h-full w-1/4 flex gap-3 '>
                     <div className='h-[1vw] w-[0.2vw] mt-[0.17vw] bg-orange-800'></div>
                 <h4 className=' text-lg font-semibold'>What we do</h4>
@@ -82,10 +82,12 @@ const Services = () => {
 
             </div>
 
-            <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} className={` transition-opacity duration-300  ${hover ? "bg-white/60" : "bg-white/70"} active:scale-95 h-[2.4vw] w-[9vw] font-medium flex items-center justify-between absolute py-[0.3vw] px-[0.7vw] rounded-4xl  left-[25.7vw] mt-[2vw]`}>
-                <button className='cursor-pointer text-lg'> Get started</button>
-                <div className='h-[1.65vw] w-[1.65vw] bg-black flex items-center justify-center text-lg text-white rounded-full'><i class="ri-arrow-right-up-line"></i></div>
-            </div>
+            <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} className={` transition-opacity duration-300  ${hover ? "bg-black/10": "bg-white/70"} active:scale-95 h-[2.4vw] w-[9vw] font-medium flex items-center justify-between absolute py-[0.3vw] px-[0.7vw] rounded-4xl  left-[25.7vw] mt-[2vw]`}>
+                <a className='cursor-pointer text-lg' href="#contact">Get started</a>
+                
+                <a href="#contact"><div className='h-[1.65vw] w-[1.65vw] bg-black flex items-center justify-center text-lg text-white rounded-full'><i class="ri-arrow-right-up-line"></i></div>
+            </a>
+                </div>
 
 
         </section>
