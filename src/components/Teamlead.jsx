@@ -1,15 +1,17 @@
 import { useGSAP } from '@gsap/react'
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import gsap from 'gsap'
 
 const Teamlead = () => {
 
   const leadRef = useRef([])
+  const [hover, setHover] = useState(false)
+  const isactive = hover === true
 
   useGSAP(()=>{
     gsap.from(leadRef.current,{
       y:-20,
-      delay:2.4,
+      delay:0.4,
       opacity:0,
       stagger:{
         amount:0.4
@@ -24,7 +26,9 @@ const Teamlead = () => {
         <h1 ref={el=> leadRef.current[1] = el} className='text-[4.2vw] tracking-wide mt-[2vw]'>Nitish Pal</h1>
         <h4 ref={el=> leadRef.current[2] = el} className='text-[1.7vw] tracking-wide text-orange-800'>Team Leader</h4>
         <h4 ref={el=> leadRef.current[3] = el} className='text-[1.4vw] mt-[3vw] tracking-wide'>&nbsp; &nbsp; &nbsp; &nbsp; Guides the team through each project and keeps<br /> everything on track. Works closely with clients to make <br /> sure their goals are clearly delivered</h4>
+        <button onMouseEnter={()=>{setHover(true)}} onMouseLeave={()=>{setHover(false)}} className={`mt-[4vw] text-xl ${isactive? "bg-white/40":"bg-white/80 "} font-medium cursor-pointer active:scale-95 text-black px-[1vw] py-[0.4vw] pb-[0.6vw] rounded-3xl`}>Request Callback</button>
       </div>
+
       
     </div>
   )

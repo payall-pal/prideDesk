@@ -35,7 +35,8 @@ const Navbar2 = () => {
   return (
     <div className='fixed z-10 w-full flex items-center  text-white/80 justify-between lg:pb-[0.7vw] lg:pt-[2vw] pt-[4vw] lg:px-[3vw] px-[5.5vw]'>
       <h4 ref={el => navRef.current[0] = el} className='font-mono lg:text-[1.1vw] text-[3.7vw]'> PRIDEDESK</h4>
-      <div ref={el => navRef.current[1] = el} className='flex gap-[12vw] mr-[3vw] lg:text-[0.95vw] '>
+     <div className='lg:block hidden'>
+       <div ref={el => navRef.current[1] = el} className='flex gap-[12vw]  mr-[3vw] lg:text-[0.95vw] '>
 
           <div className=' cursor-pointer active:scale-95'>
             <a href='#home' onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} >Home</a>
@@ -68,6 +69,7 @@ const Navbar2 = () => {
 
           
       </div>
+     </div>
       <div className='text-white lg:hidden block'>
         <i class="ri-menu-3-line"></i>
       </div>

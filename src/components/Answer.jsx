@@ -10,12 +10,12 @@ const Answer = ({ question, ans, idx, activefaq, setActivefaq, faq }) => {
 
     return (
         <div className={`h-[5vw] w-full rounded-lg bg-white/30 relative transition-all ease-in-out duration-500 ${islive ? "h-[7vw]" : "h-[5vw]"}`}>
-            <div className={`h-[5vw] w-full   flex items-center justify-between p-[1vw]  ${islive ? "opacity-0" : "opacity-100"}`}>
+            <div className={`h-[5vw] w-full   flex items-center justify-between p-[1vw] transition-all ease-in-out duration-500  ${islive ? "opacity-0" : "opacity-100"}`}>
                 <h4 className='font-medium text-lg'>{question}</h4>
                 <button></button>
                 <div className='cursor-pointer bg-black text-white rounded-full flex items-center justify-center h-[1.2vw] w-[1.2vw]' onClick={handleClick} ><i class="ri-add-line"></i></div>
             </div>
-            <div className={` absolute top-0 flex  items-start p-[1vw] pt-[1.85vw] h-full w-full justify-between ${islive ? "opacity-100" : "opacity-0"}`}>
+            <div className={` absolute top-0 flex  items-start p-[1vw] pt-[1.85vw] h-full w-full justify-between transition-all ease-in-out duration-500 ${islive ? "opacity-100" : "opacity-0"}`}>
                 <div className='flex flex-col  gap-2 w-full'>
                     <h4 className='font-medium text-lg '>{question}</h4>
                     <h5 className=''>{ans}</h5>

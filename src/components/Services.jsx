@@ -64,16 +64,16 @@ const Services = () => {
 
 
     return (
-        <section className='trigger1 w-full bg-gray-300 min-h-screen text-black p-10 relative '>
-            <div  className='h-[10vw] w-[93vw]  flex  gap-2'>
-                <div ref={divRef} className='h-full w-1/4 flex gap-3 '>
-                    <div className='h-[1vw] w-[0.2vw] mt-[0.17vw] bg-orange-800'></div>
-                <h4 className=' text-lg font-semibold'>What we do</h4>
+        <section className='trigger1 w-full bg-gray-300 lg:min-h-screen h-[80vw] text-black p-10 relative '>
+            <div  className='lg:h-[10vw] lg:w-[93vw]  flex  gap-2'>
+                <div ref={divRef} className='h-full w-1/4  flex lg:gap-3 gap-2'>
+                    <div className='lg:h-[1vw] lg:w-[0.2vw] h-[2vw] w-[0.4vw] mt-[0.17vw] bg-orange-800'></div>
+                <h4 className=' lg:text-lg text-[2vw] font-medium lg:font-semibold'>What we do</h4>
                 </div>
-                <h2 className='h-full w-3/4 text-[6vw] mr-[5vw]'>Services.</h2>
+                <h2 className='h-full w-3/4 lg:text-[6vw] text-[8vw] font-medium mr-[5vw]'>Services.</h2>
             </div>
 
-            <div className='flex flex-col gap-4'>
+            <div className='flex flex-col gap-4 bg-amber-50'>
                 {servicesData.map((service, index) => (
                     <ServiceCard
                         key={index} title={service.title} description={service.description} skills={service.skills} index={index} activeIndex={activeIndex} setActiveIndex={setActiveIndex}

@@ -11,7 +11,7 @@ const ServiceCard = ({ title, description, index, activeIndex, setActiveIndex, s
 
 
   return (
-    <div className={`cursor-pointer h-[5vw] px-[0.2vw] relative transition-all border-b border-black/50 duration-500 ease-in-out ${isActive ? "h-[10vw]" : "h-[5vw]"} bg-gray-300 text-black rounded flex justify-center flex-col `}>
+    <div className={`cursor-pointer h-[5vw] px-[0.2vw] lg:mt-0  relative transition-all border-b border-black/50 duration-500 ease-in-out ${isActive ? "h-[10vw]" : "h-[5vw]"} bg-gray-300 text-black rounded flex justify-center flex-col `}>
 
 
 

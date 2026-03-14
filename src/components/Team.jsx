@@ -10,7 +10,7 @@ const Team = () => {
     
 
     return (
-        <div className='h-screen w-full bg-black text-white/70 p-[5vw]'>
+        <div className='h-screen w-full  bg-black text-white/70 p-[5vw]'>
             <div className='h-full w-full  rounded-xl flex'>
 
                 <div className='h-full w-2/3 flex flex-col justify-between p-[2vw]'>

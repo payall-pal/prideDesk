@@ -43,16 +43,16 @@ const Projects = () => {
         gsap.from(".project-card", {
             x: 100,
             duration: 1,
-            delay: 0.03,
             opacity: 0,
-            stagger: 0.3,
+            stagger:0.3,
             ease: "power1.out",
             scrollTrigger: {
                 trigger: ".project-card",
-                start: "top 50%",
+                start: "top 90%",
                 end: "top 20%",
                 scrub: 3,
-                toggleActions: "play none none reverse"
+                toggleActions: "play none none reverse",
+                
             }
 
         })
@@ -60,16 +60,17 @@ const Projects = () => {
         gsap.from(".project-name", {
             x: 100,
             duration: 1,
-            delay: 0.03,
             opacity: 0,
             stagger: 0.3,
             ease: "power1.out",
             scrollTrigger: {
                 trigger: ".project-card",
-                start: "top 50%",
+                start: "top 90%",
                 end: "top 20%",
                 scrub: 3,
-                toggleActions: "play none none reverse"
+                toggleActions: "play none none reverse",
+               
+               
             }
 
         })
@@ -82,23 +83,22 @@ const Projects = () => {
 
 
     return (
-        <div className='projects h-[75vw] w-screen text-white flex flex-col'>
+        <div className='projects lg:h-[75vw] h-[473vw] w-screen text-white flex flex-col'>
 
-            <div className='h-[15vw] w-full flex  mx-[7vw]'>
+            <div className='h-[15vw] w-full flex  lg:mx-[7vw] mx-[4vw]'>
                 <h6 className='h-[15vw] w-[22vw] text-white/50 font-medium'>01</h6>
                 <div className='h-[15vw] w-[33vw] pt-6'> <h1 className='text-[6vw] '>Projects.</h1> <div className='h-[0.1vw] w-[12vw] bg-black'></div></div>
-                <p className='h-[15vw] w-[36vw] text-start mt-[6vw]  font-medium ml-[7vw] text-[1vw]'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  Here are some of our recent works <br />in branding, websites, and applications</p>
+                <p className='h-[15vw] lg:block hidden lg:w-[36vw] w-[50vw] text-start mt-[6vw] font-medium lg:ml-[7vw] lg:text-[1vw] text-[2.9vw]'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  Here are some of our recent works <br />in branding, websites, and applications</p>
             </div>
+            <p className='h-[15vw] lg:hidden block  w-full font-medium ml-[12vw]  text-[3vw]'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  Here are some of our recent works </p>
+            
+
             <div className='h-[35vw] w-[92vw] flex flex-wrap gap-[6vw]  mx-[5vw] px-[0.5vw] py-[2vw] '>
                 {projects.map((project, index) => (
                     <ProjectCard key={index} image={project.image} name={project.name} index={index} />
                 ))}
 
             </div>
-
-
-
-
 
         </div>
 

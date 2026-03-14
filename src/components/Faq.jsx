@@ -49,7 +49,7 @@ const Faq = () => {
        ]
 
   return (
-    <div className='min-h-screen w-full bg-gray-200 px pt-[6vw] px-[6vw] flex'>
+    <div className='min-h-screen w-full rounded-lg bg-gray-200 px pt-[6vw] px-[6vw] flex'>
 
         <div className="h-full w-1/2">
             <h1 className="text-[5vw] font-bold">FAQ.</h1>

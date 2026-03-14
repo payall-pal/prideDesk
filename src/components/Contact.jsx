@@ -1,4 +1,5 @@
-import React from 'react'
+
+import { Link } from 'react-router-dom'
 
 const Contact = () => {
     return (
@@ -14,10 +15,10 @@ const Contact = () => {
                         <input className='bg-gray-100 py-[0.4vw] rounded-lg px-[1vw]' type="text" required placeholder='JOhn Doe' />
 
                         <h6 className='font-semibold text-sm'>E-mail</h6>
-                        <input className='bg-gray-100 py-[0.4vw] rounded-lg px-[1vw]'  type="email" required placeholder='hello@gmail.com' />
+                        <input className='bg-gray-100 py-[0.4vw] rounded-lg px-[1vw]' type="email" required placeholder='hello@gmail.com' />
 
                         <h6 className='font-semibold text-sm'>Message</h6>
-                        <input className='bg-gray-100 py-[0.4vw] rounded-lg px-[1vw]'  type="text" required placeholder='Your message' />
+                        <input className='bg-gray-100 py-[0.4vw] rounded-lg px-[1vw]' type="text" required placeholder='Your message' />
 
                         <button className='bg-black rounded-4xl text-white font-medium py-[0.5vw]'>Send Message</button>
                         <h6 className='text-black/50 text-[0.7vw] font-medium'>By continuing, you agree to our <span className='text-black'>Terms</span> and <span className='text-black'>Privacy Policy.</span></h6>
@@ -43,20 +44,17 @@ const Contact = () => {
 
 
 
-                <div className='flex py-[3vw] '>
-                    <div className='h-[6vw] w-[6vw] bg-amber-50 rounded-xl flex  items-center justify-center'>
-                        <img className=' h-[5.7vw] w-[5.7vw] object-cover  rounded-2xl' src="https://images.unsplash.com/photo-1770548037928-a29bfacc84ea?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0fHx8ZW58MHx8fHx8" alt="not foound" />
-                    </div>
-                    <div className='h-[6vw] w-[11vw] text-black bg-amber-50 rounded-xl py-[1vw] px-[1.5vw]'>
-                        <div className='flex items-end gap-1'><h6 className='text-[0.72vw] font-medium'>Team Lead</h6>  <h6 className='text-gray-500 text-[0.6vw] font-medium'>Sweden</h6></div>
-                        <h2 className='text-lg font-medium'>Lauren Thompson</h2>
-                        <div className='bg-black flex justify-between items-center rounded-2xl w-[6vw] px-[0.6vw] mt-[0.4vw] text-white'>
-                            <button>Let's talk</button>
-                            <div className='h-[0.6vw] w-[0.6vw] rounded-full bg-white'></div>
-                        </div>
-                        
+                <div className='flex flex-col py-[3vw] text-white/80 mt-[2vw] ml-[0.5vw]'>
+                    <h6 className='text-[0.8vw] '>Team Lead</h6>
+                    <div className='flex gap-3 items-end text-xl font-medium text-white/90'>
+                        <h2 className=''>Lauren Thompson</h2>
+                        <Link to='/teamlead'><i class="ri-arrow-right-up-line"></i></Link>
+
                     </div>
                 </div>
+
+
+
             </div>
         </div>
     )
