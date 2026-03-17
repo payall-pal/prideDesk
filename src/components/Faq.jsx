@@ -7,7 +7,6 @@ import Answer from "./Answer"
 
 const Faq = () => {
 
-
     const [activefaq, setActivefaq] = useState(null)
     
        const faqData = [
@@ -49,14 +48,14 @@ const Faq = () => {
        ]
 
   return (
-    <div className='min-h-screen w-full rounded-lg bg-gray-200 px pt-[6vw] px-[6vw] flex'>
+    <div className='lg:h-[50vw] h-[230vw] w-full  bg-gray-200 px pt-[6vw] px-[6vw] flex lg:flex-row flex-col'>
 
-        <div className="h-full w-1/2">
-            <h1 className="text-[5vw] font-bold">FAQ.</h1>
-            <p className="text-[0.8vw]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut <br />ducimus quas voluptatum blanditiis voluptatibus cupiditate!</p>
+        <div className="lg:h-full h-[50vw] lg:w-1/2">
+            <h1 className="lg:text-[5vw] text-[17vw] lg:font-bold">FAQs</h1>
+            <p className="lg:text-[1vw] text-[4vw] font-medium">Having doubt, let us solve some for you that &nbsp;  &nbsp; are previously <br /> &nbsp;  &nbsp; &nbsp;  &nbsp;  asked by our clients</p>
         </div>
 
-        <div className="w-1/2 flex flex-col gap-2 ">
+        <div className="lg:w-1/2  flex flex-col gap-2 lg:mt-0 mt-[15vw] ">
             {faqData.map((faq,idx)=>(
                 <Answer key={idx} idx={idx} question={faq.question} ans={faq.ans} activefaq={activefaq} setActivefaq={setActivefaq}/>
             ))}

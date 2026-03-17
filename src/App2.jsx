@@ -31,7 +31,7 @@ const App2 = () => {
       <Services />
       </section>
       
-      <section >
+      <section id='about'>
       <About2 />
         </section>
       <Approach />
@@ -40,13 +40,27 @@ const App2 = () => {
       <Team />
       <Faq />
       <section id="contact">
-      <Contact />
+        <Footer />
         </section>
-      <Footer />
+      
 
       
     </div>
   )
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 export default App2

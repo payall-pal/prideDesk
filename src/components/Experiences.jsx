@@ -48,44 +48,63 @@ const Experiences = () => {
     
 
     return (
-        <div ref={changeRef} className='change min-h-screen w-full bg-black text-white px-[7vw] py-[3vw]'>
-            <div className='h-[15vw] w-[93vw]  flex '>
-                <div ref={expRef} className='main2 h-full w-1/4 flex gap-4'>
-                    <div className='h-[1vw] w-[0.2vw] bg-orange-800 mt-[0.23vw]'></div>
-                    <h4 className='text-lg font-semibold '>Testimonials</h4>
+        <div ref={changeRef} className='change lg:h-[50vw] min-h-screen   w-full  text-white lg:px-[7vw] px-[7vw] pt-[7vw] lg:py-[3vw]'>
+            <div className='lg:h-[15vw] h-[26vw] w-full lg:w-[93vw]  lg:flex-row flex flex-col'>
+                <div ref={expRef} className='main2 lg:h-full lg:w-1/4 flex  lg:gap-4 gap-2'>
+                    <div className='lg:h-[1vw] lg:w-[0.2vw] h-[5vw] w-[0.5vw] bg-orange-800 mt-0 lg:mt-[0.23vw]'></div>
+                    <h4 className='lg:text-lg text-[3.4vw] font-semibold '>Testimonials</h4>
                 </div>
 
 
-                <div className='h-full w-3/4 flex flex-col gap-[0.5vw]  mr-[5vw]'>
-
-
-                    <h4  className=' text-xl font-semibold ml-[0.3vw]'>that matters</h4>
-                    <h2 ref={el => textRef.current[0] = el} className='main3 text-[6vw] font-medium leading-none mt-[0.5vw]'>Experiences</h2>
+                <div className='h-full w-3/4 flex flex-col lg:gap-[0.5vw] leading-[0.3vw] lg:text-start text-end lg:mt-0 mt-[7vw]  lg:mr-[5vw]'>
+                    <h4  className=' lg:text-xl text-[3vw] font-semibold ml-[0.3vw]'>that matters</h4>
+                    <h2 ref={el => textRef.current[0] = el} className='main3 lg:text-[6vw] text-[13vw] font-medium leading-none lg:mt-[0.5vw]'>Experiences</h2>
                 </div>
 
             </div>
 
-            <div className='h-[27vw] w-[full] flex gap-2'>
+            <div className='lg:h-[27vw] lg:w-full  w-full  flex lg:flex-row flex-col lg:gap-2 gap-[4vw] mt-[14vw] lg:mt-[1.4vw]'>
 
-                <div className='h-full w-1/4  flex flex-col gap-1'>
 
-                    <div className='h-[17vw] w-full bg-white/30 text-white/50  rounded-xl flex items-start justify-between gap-[1vw] p-[1.5vw]'>
-                        <div className='flex items-end'><h4 className='text-4xl font-semibold'>4.9</h4><h6 className='text-semibold text-sm '>/5</h6></div>
-                        <p className='w-[12vw] font-medium  text-lg'>Lorem, ipsum dolor <span className='text-white'>sit  amet </span>consectetur adipisicing elit. Id, culpa?</p>
+
+
+                <div className='lg:hidden block lg:h-[17vw] h-[30vw] w-full  text-white/50  rounded-xl flex items-start justify-between lg:gap-[1vw] gap-[8vw] p-[1.5vw]'>
+                        <div className='flex items-end'>
+                            <h4 className='lg:text-4xl text-[6vw] font-semibold'>4.9</h4>
+                        <h6 className='text-semibold lg:text-sm text-[3vw]'>/5</h6>
+                        </div>
+                        <p className='lg:w-[12vw] font-medium  text-lg'>rating we got for<span className='text-white'> service & collabration</span> from our valuable Clients. </p>
+                </div>
+
+
+
+                
+                <div className='lg:block hidden lg:h-full lg:w-1/4 h-[120vw] w-full  flex flex-col lg:gap-1 rounded-lg gap-[4vw]'>
+                    <div className='lg:h-[17vw] h-[30vw] w-full  text-white/50  rounded-xl flex items-start justify-between lg:gap-[1vw] gap-[8vw] p-[1.5vw]'>
+                        <div className='flex items-end'>
+                            <h4 className='lg:text-4xl text-[6vw] font-semibold'>4.9</h4>
+                        <h6 className='text-semibold lg:text-sm text-[3vw]'>/5</h6>
+                        </div>
+                        <p className='lg:w-[12vw] font-medium  text-lg'>rating we got for<span className='text-white'> service & collabration</span> from our valuable Clients. </p>
                     </div>
+                    
 
-                    <div onMouseMove={() =>{setHover(true)}} onMouseLeave={() =>{setHover(false)}} className={` transition-all ease duration-75 h-[10vw] w-full ${hover ? "scale-[1.005]" :"scale-100"}  ${hover ? "bg-white/30" : "bg-black"} cursor-pointer rounded-xl relative flex flex-col gap-2 pt-[1vw] px-[2vw]`}>
-                        <h4 className='font-medium text-lg'>Pridedesk</h4>
+                    <div onMouseMove={() =>{setHover(true)}} onMouseLeave={() =>{setHover(false)}} className={` transition-all bg-white/35 ease duration-75 lg:h-[10vw] h-[80vw] w-full
+                         ${hover ? "scale-[1.005]" :"scale-100"}  ${hover ? "bg-white/30" : "bg-black"} cursor-pointer rounded-xl relative flex flex-col
+                          lg:gap-2 gap-[12vw] lg:pt-[1vw] pt-[12vw] px-[4vw] lg:px-[2vw]`}>
+                        <h4 className='font-medium lg:text-lg'>Pridedesk</h4>
+                        
                         <div className='flex items-end'>
                             <div className='flex'>
-                                <div className=' h-[2vw] w-[2vw] rounded-xl bg-black '></div>
-                                <div className='left-[1vw] absolute h-[2vw] w-[2vw] rounded-xl  border-2 border-white'><img className='h-[2vw] w-[2vw] rounded-xl' src="https://plus.unsplash.com/premium_photo-1771650827375-181d37a27ed1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDV8dG93SlpGc2twR2d8fGVufDB8fHx8fA%3D%3D" alt="" /></div>
-                                <div className='left-[2.2vw] absolute h-[2vw] w-[2vw] rounded-xl bg-black border-2 border-white'><img className='h-[2vw] w-[2vw] rounded-xl' src="https://images.unsplash.com/photo-1772242859562-124ab5ab2c3b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDN8dG93SlpGc2twR2d8fGVufDB8fHx8fA%3D%3D" alt="" /></div>
-                                <div className='left-[3.4vw] absolute h-[2vw] w-[2vw] rounded-xl bg-black border-2 border-white'><img className='h-[2vw] w-[2vw] rounded-xl' src="https://plus.unsplash.com/premium_photo-1771650827375-181d37a27ed1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDV8dG93SlpGc2twR2d8fGVufDB8fHx8fA%3D%3D" alt="" /></div>
-                                <div className='left-[4.6vw] absolute h-[2vw] w-[2vw] rounded-xl bg-black border-2 border-white'><img className='h-[2vw] w-[2vw] rounded-xl' src="https://images.unsplash.com/photo-1772107756927-a3975482b1ef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDd8dG93SlpGc2twR2d8fGVufDB8fHx8fA%3D%3D" alt="" /></div>
-                                <div className='left-[5.8vw] absolute h-[2vw] w-[2vw] rounded-xl bg-black border-2 border-white'><img className='h-[2vw] w-[2vw] rounded-xl' src="https://plus.unsplash.com/premium_photo-1771650827599-33e046949bad?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDl8dG93SlpGc2twR2d8fGVufDB8fHx8fA%3D%3D" alt="" /></div>
+                                <div className=' lg:h-[2vw] lg:w-[2vw] h-[10vw] w-[10vw] rounded-xl bg-black '></div>
+                                <div className='lg:left-[1vw] left-[4vw] absolute lg:h-[2vw] lg:w-[2vw] h-[12vw] w-[12vw] rounded-xl  border-2 border-white'><img className='lg:h-[2vw] lg:w-[2vw] h-[11vw] w-[11vw] rounded-xl' src="https://plus.unsplash.com/premium_photo-1771650827375-181d37a27ed1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDV8dG93SlpGc2twR2d8fGVufDB8fHx8fA%3D%3D" alt="" /></div>
+                                <div className='lg:left-[2.2vw] left-[6vw] absolute lg:h-[2vw] lg:w-[2vw] h-[12vw] w-[12vw] rounded-xl bg-black border-2 border-white'><img className='lg:h-[2vw] lg:w-[2vw] h-[11vw] w-[11vw] rounded-xl' src="https://images.unsplash.com/photo-1772242859562-124ab5ab2c3b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDN8dG93SlpGc2twR2d8fGVufDB8fHx8fA%3D%3D" alt="" /></div>
+                                <div className='lg:left-[3.4vw] left-[8vw] absolute lg:h-[2vw] lg:w-[2vw] h-[12vw] w-[12vw] rounded-xl bg-black border-2 border-white'><img className='lg:h-[2vw] lg:w-[2vw]  h-[11vw] w-[11vw]rounded-xl' src="https://plus.unsplash.com/premium_photo-1771650827375-181d37a27ed1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDV8dG93SlpGc2twR2d8fGVufDB8fHx8fA%3D%3D" alt="" /></div>
+                                <div className='lg:left-[4.6vw] left-[10vw] absolute lg:h-[2vw] lg:w-[2vw] h-[12vw] w-[12vw] rounded-xl bg-black border-2 border-white'><img className='lg:h-[2vw] lg:w-[2vw] h-[11vw] w-[11vw] rounded-xl' src="https://images.unsplash.com/photo-1772107756927-a3975482b1ef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDd8dG93SlpGc2twR2d8fGVufDB8fHx8fA%3D%3D" alt="" /></div>
+                                <div className='lg:left-[5.8vw] left-[12vw] absolute lg:h-[2vw] lg:w-[2vw] h-[12vw] w-[12vw] rounded-xl bg-black border-2 border-white'><img className='lg:h-[2vw] lg:w-[2vw] h-[11vw] w-[11vw] rounded-xl' src="https://plus.unsplash.com/premium_photo-1771650827599-33e046949bad?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDl8dG93SlpGc2twR2d8fGVufDB8fHx8fA%3D%3D" alt="" /></div>
                             </div>
-                            <div className='absolute left-[8.4vw]'>
+
+                            <div className='absolute lg:left-[8.4vw] lg:right-0 right-[12vw]'>
                                 <div className='text-yellow-400 flex'>
                                     <i class="ri-star-s-fill"></i>
                                     <i class="ri-star-s-fill"></i>
@@ -93,85 +112,126 @@ const Experiences = () => {
                                     <i class="ri-star-s-fill"></i>
                                     <i class="ri-star-s-fill"></i>
                                 </div>
-                                <h5 className=' font-medium'>Trusted by <span className='text-white/50 bg-black'>4.8k people</span></h5></div>
+                                <h5 className=' font-medium'>Trusted by <span className='text-white/50 bg-orange-800/50'>4.8k people</span></h5>
+                            </div>
                         </div>
-                        <button className='cursor-pointer active:scale-95 bg-black  inline-block px-[2vw] py-[0.5vw] rounded-4xl'>Leave a review</button>
+
+                        <button className='cursor-pointer active:scale-95 bg-white/50  inline-block lg:px-[2vw] lg:py-[0.5vw] px-[4vw] py-[1.4vw] rounded-4xl'>Leave a review</button>
                     </div>
                 </div>
 
 
-
-                <div className='h-full w-1/4  flex flex-col gap-1'>
-                    <div className='h-[6vw] w-full  text-white/50 rounded-xl px-[2vw] py-[1.5vw] flex gap-2 items-center'>
-                        <img className='h-[3vw] w-[3vw] object-cover rounded' src="https://plus.unsplash.com/premium_photo-1771650827599-33e046949bad?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDl8dG93SlpGc2twR2d8fGVufDB8fHx8fA%3D%3D" alt="" />
+                <div className='lg:h-full lg:w-[30vw] h-[110vw] w-full flex flex-col   bg-white/30 lg:bg-black lg:p-0 p-[6.5vw] rounded-lg lg:gap-1 gap-[14vw]'>
+                    <div className='lg:h-[6vw] h-[10vw] w-full   text-white/50 rounded-xl lg:px-[2vw] px-[2vw] lg:py-[1.5vw] flex gap-2 items-center'>
+                        <img className='lg:h-[3vw] lg:w-[3vw] h-[9vw] w-[9vw] object-cover rounded' src="https://plus.unsplash.com/premium_photo-1771650827599-33e046949bad?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDl8dG93SlpGc2twR2d8fGVufDB8fHx8fA%3D%3D" alt="" />
                         <div>
-                            <h5 className='text-xl font-medium'>Emly Devis</h5>
+                            <h5 className='text-xl  text-white/60 font-medium'>Emly Devis</h5>
                             <h6 className='text-sm text-gray-500 '>England hub</h6>
                         </div>
                     </div>
 
 
-                    <div className='h-[21vw] w-full bg-white/30 text-white/50 rounded-xl flex flex-col justify-between px-[1.6vw] py-[1vw]'>
-                        <div className='flex items-center justify-between '>
-                            <div className='flex text-yellow-600'><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i></div>
-                            
+                    <div className='lg:h-[24vw] w-full  text-white/80 rounded-xl lg:bg-white/30 flex flex-col justify-between gap-[6vw] lg:gap-0 px-[1.6vw] py-[1vw]'>
+                        <div className='flex items-center justify-between  '>
+                            <div className='flex text-yellow-600 '><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i></div>
                         </div>
 
-                        <div><p className='font-medium text-[1.4vw] text-end'>Incredible team! They delivered exactly what we needed, on time and beyonf expectations.</p> </div>
+                        <div className='text-white/80'><p className='font-medium lg:text-[1.4vw] text-[7vw] text-end'>Incredible team! They delivered exactly what we needed, on time and beyond expectations.</p> </div>
                     </div>
                 </div>
 
 
-
-                <div className='h-full w-1/4  flex flex-col gap-1'>
-                    <div className='h-[21vw] w-full bg-white/30 text-white/50 rounded-xl flex flex-col justify-between px-[1.6vw] py-[1vw]'>
-
-                        <div className='flex items-center justify-between '>
-                            <div className='flex text-yellow-600'><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i></div>
-                            
-                        </div>
-
-                        <div><p className='font-medium text-[1.4vw] text-end'>A smooth process from start to finish. Highly professional team!</p> </div>
-                    </div>
-
-                    <div className='h-[6vw] w-full  text-white/50 rounded-xl px-[2vw] py-[1.5vw] flex gap-2 items-center'>
-                        <img className='h-[3vw] w-[3vw] object-cover rounded'
+                <div className='lg:h-full lg:w-[30vw] h-[120vw] w-full  bg-white/30 lg:bg-black   flex flex-col lg:p-0 p-[6.5vw] rounded-lg lg:gap-1  gap-[14vw]'>
+                    <div className='lg:hidden block lg:h-[6vw] h-[10vw] w-full  text-white/50 rounded-xl g:px-[2vw] px-[4vw] lg:py-[1.5vw] flex gap-2 items-center'>
+                        <img className='lg:h-[3vw] lg:w-[3vw] h-[9vw] w-[9vw] object-cover rounded'
                             src='https://images.unsplash.com/photo-1770721478216-3e5dbbe8dcc2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDh8dG93SlpGc2twR2d8fGVufDB8fHx8fA%3D%3D' alt="" />
                         <div>
-                            <h5 className='text-xl font-medium'>Anjali shrewat</h5>
+                            <h5 className='text-xl text-white/60 font-medium'>Anjali shrewat</h5>
                             <h6 className='text-sm text-gray-500 '>accountanr</h6>
                         </div>
                     </div>
+
+                    
+                    <div className='lg:h-[22vw]  w-full text-white/50 lg:bg-white/30 rounded-xl flex flex-col justify-between gap-[6vw] lg:gap-0 px-[1.6vw] py-[1vw]'>
+
+                        <div className='flex items-center justify-between '>
+                            <div className='flex text-yellow-600'><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i></div>
+                            
+                        </div>
+
+                        <div><p className='font-medium lg:text-[1.4vw] text-[7vw] text-white/80 text-end'>A smooth process from start to finish. Highly professional team!</p> </div>
+                    </div>
+
+                    <div className='lg:block hidden lg:h-[6vw] h-[10vw] w-full px-[2vw] text-white/50 rounded-xl g:px-[2vw]  lg:py-[1.5vw] flex gap-2 items-center'>
+                        <img className='lg:h-[3vw] lg:w-[3vw] h-[9vw] w-[9vw] object-cover rounded'
+                            src='https://images.unsplash.com/photo-1770721478216-3e5dbbe8dcc2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDh8dG93SlpGc2twR2d8fGVufDB8fHx8fA%3D%3D' alt="" />
+                        <div>
+                            <h5 className='text-xl text-white/60 font-medium'>Anjali shrewat</h5>
+                            <h6 className='text-sm text-gray-500 '>accountanr</h6>
+                        </div>
+                    </div>
+
                 </div>
 
 
-
-                <div className='h-full w-1/4  flex flex-col gap-1'>
-                    <div className='h-[6vw] w-full  text-white/50 rounded-xl px-[2vw] py-[1.5vw] flex gap-2 items-center'>
-                        <img className='h-[3vw] w-[3vw] object-cover rounded'
+                <div className='lg:h-full lg:w-[30vw] h-[120vw] w-full  bg-white/30 lg:bg-black lg:p-0 p-[6.5vw] flex flex-col rounded-lg lg:gap-1  gap-[14vw]'>
+                    <div className='lg:h-[6vw] h-[10vw] w-full   text-white/50 rounded-xl g:px-[2vw] px-[2vw] lg:py-[1.5vw] flex gap-2 items-center'>
+                        <img className='lg:h-[3vw] lg:w-[3vw] h-[9vw] w-[9vw] object-cover rounded'
                             src='https://images.unsplash.com/photo-1772107756927-a3975482b1ef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDd8dG93SlpGc2twR2d8fGVufDB8fHx8fA%3D%3D' alt="" />
                         <div>
-                            <h5 className='text-xl font-medium'>Vansh Sharma</h5>
+                            <h5 className='text-xl text-white/60 font-medium'>Vansh Sharma</h5>
                             <h6 className='text-sm text-gray-500 '>Business Owner</h6>
                         </div>
                     </div>
 
 
-                    <div className='h-[21vw] w-full bg-white/30 text-white/50 rounded-xl flex flex-col justify-between px-[1.6vw] py-[1vw]'>
+                    <div className='lg:h-[22vw] w-full text-white/50 lg:bg-white/30 rounded-xl flex flex-col justify-between gap-[6vw] lg:gap-0 px-[1.6vw] py-[1vw]'>
                         <div className='flex items-center justify-between '>
                             <div className='flex text-yellow-600'><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i><i class="ri-star-s-fill"></i></div>
-                            {/* <div className='text-white/30'><i class="ri-shining-fill"></i></div> */}
                         </div>
 
-                        <div><p className='font-medium text-[1.3vw] text-end'>Our new branding is exactly what we envisioned - clean, modern, and unique. #1 in our industry.</p> </div>
+                        <div><p className='font-medium lg:text-[1.4vw] text-white/80 text-[7vw] text-end'>Our new branding is exactly what we envisioned - clean, modern, and unique. #1 in our industry.</p> 
+                        </div>
 
                     </div>
                 </div>
+
+
+
+
+                <div className='block lg:hidden  lg:h-full lg:w-1/4 h-[85vw] w-full  flex flex-col lg:gap-1 rounded-lg gap-[4vw]'>
+                <div onMouseMove={() =>{setHover(true)}} onMouseLeave={() =>{setHover(false)}} className={`lg:hidden block transition-all ease duration-75 lg:h-[10vw] h-[80vw] w-full
+                         ${hover ? "scale-[1.005]" :"scale-100"}  ${hover ? "bg-white/30" : "bg-black"} cursor-pointer rounded-xl relative flex flex-col
+                          lg:gap-2 gap-[12vw] lg:pt-[1vw] pt-[12vw] px-[4vw] lg:px-[2vw]`}>
+                        <h4 className='font-medium lg:text-lg'>Pridedesk</h4>
+                        
+                        <div className='flex items-end'>
+                            <div className='flex'>
+                                <div className=' lg:h-[2vw] lg:w-[2vw] h-[10vw] w-[10vw] rounded-xl bg-black '></div>
+                                <div className='lg:left-[1vw] left-[4vw] absolute lg:h-[2vw] lg:w-[2vw] h-[12vw] w-[12vw] rounded-xl  border-2 border-white'><img className='lg:h-[2vw] lg:w-[2vw] h-[11vw] w-[11vw] rounded-xl' src="https://plus.unsplash.com/premium_photo-1771650827375-181d37a27ed1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDV8dG93SlpGc2twR2d8fGVufDB8fHx8fA%3D%3D" alt="" /></div>
+                                <div className='lg:left-[2.2vw] left-[6vw] absolute lg:h-[2vw] lg:w-[2vw] h-[12vw] w-[12vw] rounded-xl bg-black border-2 border-white'><img className='lg:h-[2vw] lg:w-[2vw] h-[11vw] w-[11vw] rounded-xl' src="https://images.unsplash.com/photo-1772242859562-124ab5ab2c3b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDN8dG93SlpGc2twR2d8fGVufDB8fHx8fA%3D%3D" alt="" /></div>
+                                <div className='lg:left-[3.4vw] left-[8vw] absolute lg:h-[2vw] lg:w-[2vw] h-[12vw] w-[12vw] rounded-xl bg-black border-2 border-white'><img className='lg:h-[2vw] lg:w-[2vw]  h-[11vw] w-[11vw]rounded-xl' src="https://plus.unsplash.com/premium_photo-1771650827375-181d37a27ed1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDV8dG93SlpGc2twR2d8fGVufDB8fHx8fA%3D%3D" alt="" /></div>
+                                <div className='lg:left-[4.6vw] left-[10vw] absolute lg:h-[2vw] lg:w-[2vw] h-[12vw] w-[12vw] rounded-xl bg-black border-2 border-white'><img className='lg:h-[2vw] lg:w-[2vw] h-[11vw] w-[11vw] rounded-xl' src="https://images.unsplash.com/photo-1772107756927-a3975482b1ef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDd8dG93SlpGc2twR2d8fGVufDB8fHx8fA%3D%3D" alt="" /></div>
+                                <div className='lg:left-[5.8vw] left-[12vw] absolute lg:h-[2vw] lg:w-[2vw] h-[12vw] w-[12vw] rounded-xl bg-black border-2 border-white'><img className='lg:h-[2vw] lg:w-[2vw] h-[11vw] w-[11vw] rounded-xl' src="https://plus.unsplash.com/premium_photo-1771650827599-33e046949bad?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDl8dG93SlpGc2twR2d8fGVufDB8fHx8fA%3D%3D" alt="" /></div>
+                            </div>
+
+                            <div className='absolute lg:left-[8.4vw] lg:right-0 right-[12vw]'>
+                                <div className='text-yellow-400 flex'>
+                                    <i class="ri-star-s-fill"></i>
+                                    <i class="ri-star-s-fill"></i>
+                                    <i class="ri-star-s-fill"></i>
+                                    <i class="ri-star-s-fill"></i>
+                                    <i class="ri-star-s-fill"></i>
+                                </div>
+                                <h5 className=' font-medium'>Trusted by <span className='text-white/50 bg-orange-800/50'>4.8k people</span></h5>
+                            </div>
+                        </div>
+
+                        <button className='cursor-pointer active:scale-95 bg-white/50  inline-block lg:px-[2vw] lg:py-[0.5vw] px-[4vw] py-[1.4vw] rounded-4xl'>Leave a review</button>
+                    </div>
+                </div>                
+
             </div>
-
-
-
-
 
         </div>
     )
