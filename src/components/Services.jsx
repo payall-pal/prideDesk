@@ -4,7 +4,10 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import ServiceCard2 from './ServiceCard2'
 import { Swiper, SwiperSlide } from "swiper/react"
+import { Navigation, Pagination } from "swiper/modules"
 import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 
 const Services = () => {
 
@@ -64,6 +67,8 @@ const Services = () => {
 
     const buttonRef = useRef(false)
 
+  
+
 
 
     return (
@@ -86,7 +91,7 @@ const Services = () => {
 
                 </div>
 
-                <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} className={` transition-opacity duration-300  ${hover ? "bg-black/10" : "bg-white/70"} 
+                <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} className={` transition-opacity duration-300  ${hover ? "bg-orange-600" : "bg-white/70"} 
                 active:scale-95 lg:h-[2.4vw] h-[4.7vw] w-[18vw] lg:w-[9vw] font-medium flex items-center justify-between absolute  lg:py-[0.3vw] lg:px-[0.7vw] px-[1.4vw] rounded-4xl left-[28vw] lg:left-[25.7vw] mt-[3vw] lg:mt-[2vw]`}>
                     <a className='cursor-pointer lg:text-lg text-[1.5vw] font-medium' href="#contact">Get started</a>
 
@@ -96,14 +101,17 @@ const Services = () => {
 
             </div>
 
-            <div className='lg:hidden block mt-[10vw]'>
+            <div className='lg:hidden relative block mt-[10vw]'>
 
-                <Swiper slidesPerView={1} spaceBetween={10} loop={true} grabCursor={true} allowTouchMove={true}>
+                <Swiper modules={[Navigation,Pagination]} pagination={{clickable:true}}  navigation={{ prevEl: '.prev-btn', nextEl: '.next-btn'}}  slidesPerView={1} spaceBetween={10} loop={true} grabCursor={true} allowTouchMove={true} >
                     {servicesData.map((service, index) => (
                         <SwiperSlide key={index} className='w-full'>
                             <ServiceCard2
                                 key={index} title={service.title} description={service.description} skills={service.skills} index={index}
                             />
+                            <div className='prev-btn h-[10vw] w-[10vw] text-[6vw] text-black/30 font-bold rounded-full  flex items-center justify-center'> <i class="ri-arrow-left-s-line"></i></div>
+                            <div className='next-btn h-[10vw] w-[10vw] text-[6vw] text-black/30 font-bold rounded-full  flex items-center justify-center'> <i class="ri-arrow-right-s-line"></i> </div>
+
                         </SwiperSlide>
 
 

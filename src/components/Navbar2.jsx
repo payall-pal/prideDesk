@@ -5,11 +5,13 @@ import { Link } from 'react-router-dom'
 import Hero2 from './Hero2'
 import ProjectCard from './ProjectCard'
 import Projects from './Projects'
+// import Menu from './Menu'
 
 const Navbar2 = () => {
 
 
-
+  
+  // const [activee, setActivee] = useState(false)
   const [hover, setHover] = useState(false)
   const [hover1, setHover1] = useState(false)
   const [hover2, setHover2] = useState(false)
@@ -33,7 +35,7 @@ const Navbar2 = () => {
 
 
   return (
-    <div className='fixed z-10 w-full flex items-center  text-white/80 justify-between lg:pb-[0.7vw] lg:pt-[2vw] pt-[4vw] lg:px-[3vw] px-[5.5vw]'>
+    <div className='fixed  w-full  flex items-center  text-white/80 justify-between lg:pb-[0.7vw] lg:pt-[2vw] pt-[4vw] lg:px-[3vw] px-[5.5vw]'>
       <h4 ref={el => navRef.current[0] = el} className='font-mono lg:text-[1.1vw] text-[3.7vw]'> PRIDEDESK</h4>
      <div className='lg:block hidden'>
        <div ref={el => navRef.current[1] = el} className='flex gap-[12vw]  mr-[3vw] lg:text-[0.95vw] '>
@@ -70,9 +72,9 @@ const Navbar2 = () => {
           
       </div>
      </div>
-      <div className='text-white lg:hidden block'>
-        <i class="ri-menu-3-line"></i>
-      </div>
+
+
+      
 
 
 

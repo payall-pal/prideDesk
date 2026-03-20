@@ -27,8 +27,8 @@ const About2 = () => {
 
 
     return (
-        <div className='main lg:h-[75vw] lg:w-screen h-[270vw] w-screen bg-black py-[3vw] '>
-            <div className='lg:h-[15vw] lg:w-[93vw] mx-[7vw]  h-[65vw] w-full  text-white/80 flex '>
+        <div className='main lg:h-[75vw] lg:w-screen h-[270vw] w-screen bg-black  lg:py-[3vw] '>
+            <div className='lg:h-[15vw] lg:w-[93vw] mx-[7vw]  h-[65vw] w-full lg:mt-0 mt-[10vw] text-white/80 flex '>
                 <div ref={aboutRef} className=' lg:h-full w-1/4 flex  gap-4'>
                     <div className='lg:h-[1vw] lg:w-[0.2vw] h-[4vw] w-[0.6vw] bg-orange-800 mt-[0.25vw]'></div>
                     <h4 className=' lg:text-lg lg:font-semibold text-[3vw]'>About us</h4>
@@ -120,11 +120,12 @@ const About2 = () => {
             </div>
 
             <div className='lg:h-[40vw] lg:w-full h-[60vw]  w-full mt-[6vw] lg:mt-[4vw] rounded relative '>
-                <div className='absolute z-20 left-[36vw] lg:top-[18vw] top-[24vw] flex lg:gap-[0.6vw] gap-[2vw] items-center'>
-                    <div className='h-[4vw] w-[4vw] bg-black text-white/80 flex text-[2vw] items-center justify-center cursor-pointer rounded-full'><i class="ri-play-fill"></i></div>
+                <div className='absolute z-20 lg:left-[42vw] left-[36vw] lg:top-[18vw] top-[24vw] flex lg:gap-[0.6vw] gap-[2vw] items-center'>
+                    <div className='h-[4vw] w-[4vw] bg-black text-white/80 flex text-[2vw] items-center justify-center cursor-pointer rounded-full'>
+                    <i class="ri-play-fill"></i></div>
                     <div>
                         
-                    <h3 className='lg:text-xl text-[2.7vw] text-white font-medium'>Watch showreel</h3>
+                    <h3 className='lg:text-xl text-[2.7vw] text-white font-medium '>Watch showreel</h3>
                     <h5 className='lg:block hidden text-white   lg:text-sm'>2006-235</h5>
                     </div>
 

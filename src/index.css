@@ -1,5 +1,7 @@
 @import "tailwindcss";
 @import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
 
 
 :root{
@@ -12,3 +14,21 @@
     --darkgrey: #4D4D4D;
     --platinum:#DADEE1;
 }
+
+.swiper-wrapper {
+    transition-timing-function: linear !important;
+}
+
+.prev-btn, .next-btn {
+    position: absolute;
+    bottom: 0%;
+    transform: translateY(-50%);
+    z-index: 10
+}   
+.prev-btn {
+    left: 10px;
+}
+.next-btn{
+    right: 10px;
+}
+ 

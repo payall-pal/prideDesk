@@ -35,14 +35,14 @@ const ServiceCard = ({ title, description, index, activeIndex, setActiveIndex, s
 
           <div className='h-full w-[20vw] ml-[0.2vw]'>
             <h4 className={`text-[2vw] `}>{title}</h4>
-            <p className={`w-[17vw] text-[1vw] font-medium`}>{description}</p>
+            <p className={`w-[17vw] text-[0.96vw] `}>{description}</p>
           </div>
 
           <div className='h-full w-[40vw] flex flex-col gap-2 text-gray-300'>
-            <h6 className="text-black text-[1vw] mt-[0.9vw]">Categories</h6>
+            <h6 className="text-black text-[1vw] mt-[0.9vw] font-medium ">Categories</h6>
             <div className='flex items-center gap-[2vw]'>
               {skills.map((elem, idx) => (
-                <h1 className='bg-white/20  rounded-3xl px-[1.2vw] py-[0.2vw] pb-[0.24vw] text-black text-lg ' key={idx}>{elem}</h1>
+                <h1 className='bg-white/20  font-medium  rounded-3xl px-[1.2vw] py-[0.2vw] pb-[0.24vw] text-black text-lg ' key={idx}>{elem}</h1>
               ))}
             </div>
           </div>

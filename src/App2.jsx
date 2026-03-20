@@ -26,7 +26,6 @@ const App2 = () => {
       <section id="projects">
         <Projects />
       </section>
-      <Why />
       <section id="services">
       <Services />
       </section>
