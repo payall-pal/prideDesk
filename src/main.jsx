@@ -7,6 +7,7 @@ import Loader from './components/loader.jsx'
 
 createRoot(document.getElementById('root')).render(
 <BrowserRouter>
+
     <Loader>
         <App />
     </Loader>

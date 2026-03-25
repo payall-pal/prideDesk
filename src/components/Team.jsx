@@ -2,6 +2,7 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import  { useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const Team = () => {
 
@@ -72,7 +73,9 @@ const Team = () => {
                         <div className='flex flex-col gap-4 lg:w-[20vw]  w-[45vw] lg:mt-0 mt-[40vw]'>
                             <h4 className='font-medium lg:text-[1.1vw] text-orange-700/80 text-2xl'>Be part of our mission</h4>
                             <h6 className='text-white/60'>If you're ready to create and <br /> collabration, we'd love to hear from you.</h6>
-                            <button className='bg-white/30 lg:text-lg text-[4vw] text-white/70 border-white border cursor-pointer active:scale-95 px-[2vw] lg:px-[3vw] py-[1vw] lg:py-[0.2vw] rounded-2xl lg:font-medium'>Apply now</button>
+                            <Link to='./apply' className='bg-white/30 lg:text-lg text-[4vw] text-white/70 border-white border cursor-pointer active:scale-95 px-[2vw] lg:px-[7.5vw] py-[1vw] 
+                            lg:py-[0.2vw] rounded-2xl lg:font-medium'>
+                            Apply now</Link>
                         </div>
                         <p className='lg: block hidden lg:w-[27vw] w-[45vw] lg:ml-0 ml-[19vw] mt-0 lg:mt-0 lg:text-2xl text-[8vw] font-normal text  leading-[4.9vw] lg:leading-[1.6vw] text-white/50'>We believe great work comes from <span className='text-white'>Collabration, creativity </span>and <span className='text-2xl text-white'>commitment.</span></p>
                     </div>

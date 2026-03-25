@@ -11,8 +11,14 @@
     --black: #171717;
     --grey: #DEDEDE;
     --whitee: #8c9ec5;
-    --darkgrey: #4D4D4D;
+    --darkgrey: #504f4f;
     --platinum:#DADEE1;
+    --bg1: #262626;
+    --bg2 : #474747;
+    --bg3: #737373;
+    --bg4:#525252;
+    --text: #D4D4D4;
+
 }
 
 .swiper-wrapper {

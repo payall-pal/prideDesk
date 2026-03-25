@@ -13,8 +13,6 @@ const ServiceCard = ({ title, description, index, activeIndex, setActiveIndex, s
   return (
     <div className={`cursor-pointer h-[5vw] px-[0.2vw] lg:mt-0  relative transition-all border-b border-black/50 duration-500 ease-in-out ${isActive ? "h-[10vw]" : "h-[5vw]"} bg-gray-300 text-black  flex justify-center flex-col `}>
 
-
-
       <div className={`transition-opacity duration-300 h-full  ${isActive ? "opacity-0" : "opacity-100"}  flex items-start justify-between  `}>
         <h4 className='h-full w-1/4 lg:text-[1.3vw] text-[2.5vw]'>{index}</h4>
 
@@ -23,9 +21,6 @@ const ServiceCard = ({ title, description, index, activeIndex, setActiveIndex, s
           <div onClick={handleClick} className=' border rounded-full lg:px-[0.28vw] px-[0.7vw] mr-[2.6vw] mb-[1.5vw] text-black/80 lg:text-[1vw] text-[2vw]'> <i class="ri-add-line"></i></div>
         </div>
       </div>
-
-
-
 
 
       <div className={`absolute w-[93vw] flex items-start h-full  justify-between  transition-opacity duration-300 ${isActive ? "opacity-100" : "opacity-0"} `}>
@@ -51,8 +46,6 @@ const ServiceCard = ({ title, description, index, activeIndex, setActiveIndex, s
         </div>
         <div onClick={handleClick} className={`border rounded-full px-[0.28vw] mt-[1vw] lg:ml-[1vw] lg:mr-[1.1vw]  transition-opacity duration-300 ${isActive ? "opacity-100" : "opacity-0"}`}> <i class="ri-subtract-line"></i></div>
       </div>
-
-
 
     </div>
   )

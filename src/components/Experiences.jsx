@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import { Autoplay } from "swiper/modules"
 import 'swiper/css'
 import Testimonial from './Testimonial'
+import { Link } from 'react-router-dom'
 
 
 const Experiences = () => {
@@ -147,7 +148,7 @@ const Experiences = () => {
                             </div>
                         </div>
 
-                        <button className='cursor-pointer active:scale-95 bg-white/50  inline-block lg:px-[2vw] lg:py-[0.5vw] px-[4vw] py-[1.4vw] rounded-4xl'>Leave a review</button>
+                        <Link to='/givereview' className='cursor-pointer active:scale-95 bg-white/50 items-center inline-block lg:px-[4.7vw] lg:py-[0.5vw] px-[4vw] py-[1.4vw] rounded-4xl'>Leave a review</Link>
                     </div>
                 </div>
 

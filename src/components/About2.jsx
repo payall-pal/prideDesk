@@ -1,5 +1,5 @@
 import { useGSAP } from '@gsap/react'
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import gsap from 'gsap'
 
 const About2 = () => {
@@ -7,6 +7,20 @@ const About2 = () => {
 
     const aboutRef = useRef()
     const videoRef = useRef()
+
+    const [ isPlaying , setIsPlaying ] = useState(false)
+
+    function handleClick(){
+        if (videoRef.current.paused){
+            videoRef.current.play();
+            setIsPlaying(true)
+        }
+        else{
+            videoRef.current.pause()
+            setIsPlaying(false)
+        }
+    }
+
     useGSAP(() => {
         gsap.from(aboutRef.current,{
             y:-8,
@@ -46,8 +60,8 @@ const About2 = () => {
 
 
 
-            <div className='lg:h-[7vw] lg:w-full h-[115vw] w-full lg:flex lg:flex-row flex  flex-col  lg:mx-[1vw] mx-[7vw] lg:gap-0.5 gap-[8vw]'>
-                <div className='lg:h-full lg:w-1/4 h-[20vw] w-full rounded-xl  text-white/80 py-[0.5vw] px-[1.5vw] flex flex-col gap-5'>
+            <div className='lg:h-[7vw] lg:w-full h-[115vw] w-full lg:flex lg:flex-row flex  flex-col  lg:mx-[3vw] mx-[7vw] lg:gap-0.5 gap-[8vw]'>
+                <div className='lg:h-full lg:w-[23vw] h-[20vw]  w-full rounded-xl bg-black/20 text-white/80 py-[0.5vw] px-[1.5vw] flex flex-col gap-5'>
                     <div className='flex items-center justify-between'>
                         <div className='flex gap-0.5'>
                             <div className='lg:h-[0.5vw] lg:w-[0.5vw]  h-[1.4vw] w-[1.4vw] bg-white rounded-full mt-[0.44vw]'></div>
@@ -63,7 +77,7 @@ const About2 = () => {
                     </div>
                 </div>
 
-                <div className='lg:h-full lg:w-1/4 h-[20vw] w-full rounded-xl bg-black/20 text-white/80 py-[0.5vw] px-[1.5vw] flex flex-col gap-5'>
+                <div className='lg:h-full lg:w-[23vw] h-[20vw]  w-full rounded-xl bg-black/20 text-white/80 py-[0.5vw] px-[1.5vw] flex flex-col gap-5'>
                     <div className='flex items-center justify-between'>
                         <div className='flex gap-0.5'>
                             <div className='lg:h-[0.5vw] lg:w-[0.5vw]  h-[1.4vw] w-[1.4vw] bg-white rounded-full mt-[0.44vw]'></div>
@@ -80,7 +94,7 @@ const About2 = () => {
                     </div>
                 </div>
 
-                <div className='lg:h-full lg:w-1/4 h-[20vw] w-full rounded-xl bg-black/20 text-white/80 py-[0.5vw] px-[1.5vw] flex flex-col gap-5'>
+                <div className='lg:h-full lg:w-[23vw] h-[20vw]  w-full rounded-xl bg-black/20 text-white/80 py-[0.5vw] px-[1.5vw] flex flex-col gap-5'>
                     <div className='flex items-center justify-between'>
                         <div className='flex gap-0.5'>
                             <div className='lg:h-[0.5vw] lg:w-[0.5vw]  h-[1.4vw] w-[1.4vw] bg-white rounded-full mt-[0.44vw]'></div>
@@ -97,7 +111,7 @@ const About2 = () => {
                     </div>
                 </div>
 
-                <div className='lg:h-full lg:w-1/4 h-[20vw] w-full rounded-xl bg-black/20 text-white/80 py-[0.5vw] px-[1.5vw] flex flex-col gap-5'>
+                <div className='lg:h-full lg:w-[23vw] h-[20vw]  w-full rounded-xl bg-black/20 text-white/80 py-[0.5vw] px-[1.5vw] flex flex-col gap-5'>
                     <div className='flex items-center justify-between '>
                         <div className='flex gap-0.5'>
                             <div className='lg:h-[0.5vw] lg:w-[0.5vw]  h-[1.4vw] w-[1.4vw] bg-white rounded-full mt-[0.44vw]'></div>
@@ -120,9 +134,9 @@ const About2 = () => {
             </div>
 
             <div className='lg:h-[40vw] lg:w-full h-[60vw]  w-full mt-[6vw] lg:mt-[4vw] rounded relative '>
-                <div className='absolute z-20 lg:left-[42vw] left-[36vw] lg:top-[18vw] top-[24vw] flex lg:gap-[0.6vw] gap-[2vw] items-center'>
-                    <div className='h-[4vw] w-[4vw] bg-black text-white/80 flex text-[2vw] items-center justify-center cursor-pointer rounded-full'>
-                    <i class="ri-play-fill"></i></div>
+                <div className=' absolute z-20 lg:left-[42vw] left-[36vw] lg:top-[18vw] top-[24vw] flex lg:gap-[0.6vw] gap-[2vw] items-center'>
+                    <div onClick={handleClick} className={` h-[3vw] w-[3vw] bg-black text-white/80 flex text-[1vw] items-center justify-center cursor-pointer rounded-full`}> {isPlaying ? <i class="ri-pause-line"></i> : <i class="ri-play-large-fill"></i>}
+                     </div>
                     <div>
                         
                     <h3 className='lg:text-xl text-[2.7vw] text-white font-medium '>Watch showreel</h3>
@@ -131,7 +145,8 @@ const About2 = () => {
 
                 </div>
                 
-                <video  autoPlay muted loop  className='video scale-95 lg:h-[40vw] lg:w-full rounded-3xl object-cover' src="https://www.pexels.com/download/video/5529079/"></video>
+                <video  ref={videoRef}   muted loop  className='video scale-95 lg:h-[40vw] lg:w-full rounded-3xl object-cover' 
+                src="https://www.pexels.com/download/video/5529079/"></video>
             </div>
 
 

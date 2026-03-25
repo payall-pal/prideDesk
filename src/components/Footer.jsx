@@ -4,56 +4,27 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import React, { useRef } from 'react'
 
 const Footer = () => {
-
-
-    const handleSubmit = async (e) =>{
+    const handleSubmit = async (e)=>{
         e.preventDefault()
-        
-
-        const data = {
-            name,
-            email,
-            message
-        }
-        console.log(data)
-
-        await fetch("http://localhost:5000/contact", {
+       const data =  {
+            name: e.target.name.value,
+            email: e.target.email.value,
+            message: e.target.message.value
+        }       
+        const res = await fetch("http://localhost:5001/contact", {
             method: "POST",
             headers: {
                 "Content-Type": "application /json",
             },
             body: JSON.stringify(data)
-        })
-
-        alert("Message sent!")
+        })       
+        const result = res
+        console.log(result)      
+    //     alert("Message sent!")
     }
 
 
 
-    const footerRef = useRef(null)
-    const textRef = useRef(null)
-
-    gsap.registerPlugin(ScrollTrigger)
-
-    const mm = gsap.matchMedia()
-
-    useGSAP(()=>{
-
-        mm.add("(min-width:1024px)",()=>{
-            gsap.from(footerRef.current,{
-            opacity:0,
-            duration:0.4,
-            delay:0.3,
-            scrollTrigger:{
-                trigger: footerRef.current,
-                start: "top 80%",
-                end: "top 20%",
-                scrub:3
-            }
-        })
-        })
-
-    })
 
     return (
         <div className='lg:h-[80vw] h-[250vw]  text-white/50 w-full p-[8vw] flex mb-[2vw] relative'>
@@ -81,13 +52,13 @@ const Footer = () => {
             </div>
 
 
-            <div className='-h-full lg:w-1/2 w-full flex flex-col gap-[1vw]'>
-                <h2 ref={footerRef} className='text-5xl w-1/2 font-semibold'>Have a <span className='text-orange-800/70'>Project</span> in mind??</h2>
-                <form className='flex flex-col text-white mt-[20vw] lg:mt-[2.4vw] gap-[6vw] lg:gap-[1.5vw]'> 
-                    <input className='pb-[1vw] border-b border-white/50' type="text" placeholder='Your name' required />
-                    <input className='pb-[1vw] border-b border-white/50' type="email" placeholder='E-mail' required />
-                    <input className='pb-[1vw] border-b border-white/50' type="text" placeholder='Message' required />
-                    <button onClick={handleSubmit} className='bg-white/30  cursor-pointer active:scale-95 py-[2vw] lg:py-[0.46vw] rounded-2xl mt-[1vw]'>Send Message</button>
+            <div className='h-full lg:w-1/2 w-full flex flex-col gap-[1vw]'>
+                <h2  className='text-5xl w-1/2 font-semibold'>Have a <span className='text-orange-800/70'>Project</span> in mind??</h2>
+                <form onSubmit={(e)=>{handleSubmit(e)}} className='flex flex-col text-white mt-[20vw] lg:mt-[2.4vw] gap-[6vw] lg:gap-[1.5vw]'> 
+                    <input name='name' className='pb-[1vw] border-b border-white/50' type="text" placeholder='Your name' required />
+                    <input name='email' className='pb-[1vw] border-b border-white/50' type="email" placeholder='E-mail' required />
+                    <input name='message' className='pb-[1vw] border-b border-white/50' type="text" placeholder='Message' required />
+                    <button className='bg-white/30  cursor-pointer active:scale-95 py-[2vw] lg:py-[0.46vw] rounded-2xl mt-[1vw]'>Send Message</button>
                 </form>
                 <p className='text-white/50 font-medium text-[3vw] lg:text-[0.86vw]'>* We'll redirect to you within 24 hrs via e-mail</p>
                
